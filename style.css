@@ -93,10 +93,14 @@ ul::-moz-selection, ul li::-moz-selection {
 }
 
 @media (max-width: 960px) {
+    .nav ul {
+        margin: 1em;
+    }
+}
+
+@media (max-width: 661px) {
     .nav ul li {
         border-radius: 6px;
         margin: 0.25rem 0;
-    } .nav ul {
-        margin: 1em;
     }
 }
