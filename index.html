@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weight Converter</title>
+    <link href="https://fonts.googleapis.com/css?family=Work+Sans:400,500,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Weight Converter</h1>
+    <div class="nav">
+        <ul>
+            <li id="nav-grams" class="selected">Grams</li>
+            <li id="nav-kilos" class="">Kilogrammes</li>
+            <li id="nav-pounds" class="">Pounds</li>
+            <li id="nav-l-tonnes" class="">US Tonnes</li>
+            <li id="nav-s-tonnes" class="">Metric Tonnes</li>
+        </ul>
+    </div>
+    <div id="container">
+        <input type="number" id="num-input">
+        <div class="unit grams">
+            <h2>Grams</h2>
+            <p id="grams">0</p>
+        </div>
+        <div class="unit kilos">
+            <h2>Kilogrammes</h2>
+            <p id="kilos">0</p>
+        </div>
+        <div class="unit pounds">
+            <h2>Pounds</h2>
+            <p id="pounds">0</p>
+        </div>
+        <div class="unit short-tonnes">
+            <h2>US Tonne</h2>
+            <p id="l-tonne">0</p>
+        </div>
+        <div class="unit long-tonnes">
+            <h2>Metric Tonne</h2>
+            <p id="s-tonne">0</p>
+        </div>
+    </div>
+    
+    <script src="app.js"></script>
+</body>
+</html>
