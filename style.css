@@ -1,3 +1,11 @@
+:root {
+    --first-weight-colour: #e74c3c;
+    --second-weight-colour: #2ecc71;
+    --third-weight-colour: #3498db;
+    --fourth-weight-colour: #9b59b6;
+    --fifth-weight-colour: #e67e22;
+}
+
 body {
     font-family: "Work Sans", sans-serif;
     background-color: #232323;
@@ -39,23 +47,23 @@ body {
 }
 
 .grams {
-    background-color: #e74c3c;
+    background-color: var(--first-weight-colour);
 }
 
 .kilos {
-    background-color: #2ecc71;
+    background-color: var(--second-weight-colour);
 }
 
 .pounds {
-    background-color: #3498db;
+    background-color: var(--third-weight-colour);
 }
 
 .short-tonnes {
-    background-color: #9b59b6;
+    background-color: var(--fourth-weight-colour);
 }
 
 .long-tonnes {
-    background-color: #e67e22;
+    background-color: var(--fifth-weight-colour);
 }
 
 .nav ul {
@@ -90,6 +98,11 @@ ul::selection, ul li::selection {
 ul::-moz-selection, ul li::-moz-selection {
     color: none;
     background: none;
+}
+
+.nav-change-presets {
+    display: flex;
+    flex-direction: column;
 }
 
 @media (max-width: 960px) {
