@@ -95,6 +95,8 @@ ul::-moz-selection, ul li::-moz-selection {
 @media (max-width: 960px) {
     .nav ul {
         margin: 1em;
+    } .nav ul li {
+        border-radius: 6px;
     }
 }
 
