@@ -101,7 +101,6 @@ ul::-moz-selection, ul li::-moz-selection {
 }
 
 .nav-change-presets {
-    display: flex;
     flex-direction: column;
 }
 
