@@ -1,9 +1,10 @@
 :root {
-    --first-weight-colour: #e74c3c;
-    --second-weight-colour: #2ecc71;
-    --third-weight-colour: #3498db;
-    --fourth-weight-colour: #9b59b6;
-    --fifth-weight-colour: #e67e22;
+    --first-weight-color: #e74c3c;
+    --second-weight-color: #2ecc71;
+    --third-weight-color: #3498db;
+    --fourth-weight-color: #9b59b6;
+    --fifth-weight-color: #e67e22;
+    --sixth-weight-color: #1B1464;
 }
 
 body {
@@ -47,24 +48,28 @@ body {
     font-size: 18px;
 }
 
-.slot-1 {
-    background-color: var(--first-weight-colour);
+.slot1 {
+    background-color: var(--first-weight-color);
 }
 
-.slot-2 {
-    background-color: var(--second-weight-colour);
+.slot2 {
+    background-color: var(--second-weight-color);
 }
 
-.slot-3 {
-    background-color: var(--third-weight-colour);
+.slot3 {
+    background-color: var(--third-weight-color);
 }
 
-.slot-4 {
-    background-color: var(--fourth-weight-colour);
+.slot4 {
+    background-color: var(--fourth-weight-color);
 }
 
-.slot-5 {
-    background-color: var(--fifth-weight-colour);
+.slot5 {
+    background-color: var(--fifth-weight-color);
+}
+
+.slot6 {
+    background-color: var(--sixth-weight-color);
 }
 
 .nav ul {

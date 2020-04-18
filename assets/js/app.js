@@ -1,41 +1,29 @@
-var gramsNavBtn = document.querySelector("#nav-grams");
-var kilosNavBtn = document.querySelector("#nav-kilos");
-var poundsNavBtn = document.querySelector("#nav-pounds");
-var usTonneNavBtn = document.querySelector("#nav-l-tonnes");
-var metricTonneNavBtn = document.querySelector("#nav-s-tonnes");
+var slot1 = document.querySelector("#nav-grams");
+var slot2 = document.querySelector("#nav-litres");
+var slot3 = document.querySelector("#nav-decilitres");
+var slot4 = document.querySelector("#nav-pounds");
+var slot5 = document.querySelector("#nav-tbs");
+var slot6 = document.querySelector("#nav-tsp");
 
-var gramsDisplay = document.querySelector("#grams");
-var kilosDisplay = document.querySelector("#kilos");
-var poundsDisplay = document.querySelector("#pounds");
-var usTonnesDisplay = document.querySelector("#l-tonne");
-var metricTonnesDisplay = document.querySelector("#s-tonne");
+var slot1Display = document.querySelector(".slot1 p");
+var slot2Display = document.querySelector(".slot2 p");
+var slot3Display = document.querySelector(".slot3 p");
+var slot4Display = document.querySelector(".slot4 p");
+var slot5Display = document.querySelector(".slot5 p");
+var slot6Display = document.querySelector(".slot6 p");
 
 var input = document.querySelector("#num-input");
 
-var selected = gramsNavBtn;
+var selected = slot1;
 
 var lis = document.querySelectorAll("li");
 for(var i = 0; i < lis.length; i++) {
     lis[i].addEventListener("click", function() {
-        if(this.id === gramsNavBtn.id) {
-            newTab(this);
-        } else if(this.id === kilosNavBtn.id) {
-            newTab(this);
-        } else if(this.id === poundsNavBtn.id) {
-            newTab(this);
-        } else if(this.id === usTonneNavBtn.id) {
-            newTab(this);
-        } else if(this.id === metricTonneNavBtn.id) {
-            newTab(this);
-        }
+        selected.classList.remove("selected");
+        selected = this;
+        selected.classList.add("selected");
+        conversion(input);
     });
-}
-
-function newTab(obj) {
-    selected.classList.remove("selected");
-    selected = obj;
-    selected.classList.add("selected");
-    conversion(input);
 }
 
 input.addEventListener("change", function() {
@@ -43,43 +31,11 @@ input.addEventListener("change", function() {
 });
 
 function conversion(obj) {
-    if(selected.id === gramsNavBtn.id) {
+    if(selected.id === slot1.id) {
         gramsDisplay.textContent = obj.value * 1;
         kilosDisplay.textContent = obj.value / 1000;
         poundsDisplay.textContent = (obj.value / 453.59237);
         usTonnesDisplay.textContent = (obj.value / 907184.74);
         metricTonnesDisplay.textContent = (obj.value / 1000000);
-    }
-
-    if(selected.id === kilosNavBtn.id) {
-        gramsDisplay.textContent = obj.value * 1000;
-        kilosDisplay.textContent = obj.value * 1;
-        poundsDisplay.textContent = (obj.value * 2.20462);
-        usTonnesDisplay.textContent = (obj.value / 907.18474);
-        metricTonnesDisplay.textContent = (obj.value / 1000);
-    }
-
-    if(selected.id === poundsNavBtn.id) {
-        gramsDisplay.textContent = obj.value * 453.592;
-        kilosDisplay.textContent = obj.value / 2.205;
-        poundsDisplay.textContent = (obj.value * 1);
-        usTonnesDisplay.textContent = (obj.value / 2000);
-        metricTonnesDisplay.textContent = (obj.value / 2205);
-    }
-
-    if(selected.id === usTonneNavBtn.id) {
-        gramsDisplay.textContent = obj.value * 1016047;
-        kilosDisplay.textContent = obj.value * 907;
-        poundsDisplay.textContent = (obj.value * 2000);
-        usTonnesDisplay.textContent = (obj.value * 1);
-        metricTonnesDisplay.textContent = (obj.value / 1.102);
-    }
-
-    if(selected.id === metricTonneNavBtn.id) {
-        gramsDisplay.textContent = obj.value * 1000000;
-        kilosDisplay.textContent = obj.value * 1000;
-        poundsDisplay.textContent = (obj.value * 2204.62);
-        usTonnesDisplay.textContent = (obj.value * 1.10230999994555);
-        metricTonnesDisplay.textContent = (obj.value * 1);
     }
 }
