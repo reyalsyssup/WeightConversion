@@ -39,7 +39,6 @@ function newTab(obj) {
 }
 
 input.addEventListener("change", function() {
-    console.log("input");
     conversion(this);
 });
 

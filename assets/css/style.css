@@ -47,23 +47,23 @@ body {
     font-size: 18px;
 }
 
-.grams {
+.slot-1 {
     background-color: var(--first-weight-colour);
 }
 
-.kilos {
+.slot-2 {
     background-color: var(--second-weight-colour);
 }
 
-.pounds {
+.slot-3 {
     background-color: var(--third-weight-colour);
 }
 
-.short-tonnes {
+.slot-4 {
     background-color: var(--fourth-weight-colour);
 }
 
-.long-tonnes {
+.slot-5 {
     background-color: var(--fifth-weight-colour);
 }
 
